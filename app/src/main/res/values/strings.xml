@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Route Optimizer</string>
+    <string name="title_activity_maps">Route Optimizer</string>
+    <string name="title_activity_main">Route Optimizer</string>
+</resources>

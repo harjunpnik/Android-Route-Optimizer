@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/routeViewLayout"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapsActivity">
+
+    <Button
+        android:id="@+id/setDestinationButton"
+        android:layout_width="51dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="56dp"
+        android:text="Set"
+        android:onClick="onSetDest"
+        android:textSize="8sp"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintStart_toEndOf="@+id/destinationAddressTextInput"
+        map:layout_constraintTop_toBottomOf="@+id/destinationAddressTextView" />
+
+    <Button
+        android:id="@+id/addWaypointButton"
+        android:layout_width="51dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="56dp"
+        android:text="Add"
+        android:onClick="onAddWaypoint"
+        android:textSize="8sp"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintStart_toEndOf="@+id/waypointAddressTextInput"
+        map:layout_constraintTop_toBottomOf="@+id/waypointAddressTextView" />
+
+    <EditText
+        android:id="@+id/waypointAddressTextInput"
+        android:layout_width="250dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="56dp"
+        android:ems="10"
+        android:inputType="textAutoCorrect|textPersonName"
+        android:text="Location"
+        android:textSize="14sp"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toBottomOf="@+id/waypointAddressTextView" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="413dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/routeNameTextInput"
+        android:layout_width="262dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Route Name"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        map:layout_constraintEnd_toStartOf="@+id/durationTextView"
+        map:layout_constraintStart_toStartOf="@+id/toolbar"
+        map:layout_constraintTop_toTopOf="@+id/toolbar" />
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="400dp"
+        android:layout_height="268dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintHorizontal_bias="0.444"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toBottomOf="@+id/toolbar"
+        tools:context=".MapsActivity" />
+
+    <Button
+        android:id="@+id/saveRouteButton"
+        android:layout_width="118dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="80dp"
+        android:onClick="onSaveRoute"
+        android:text="Save Route"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintTop_toBottomOf="@+id/listView" />
+
+    <TextView
+        android:id="@+id/startAddressTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Start Address"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintHorizontal_bias="0.498"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toBottomOf="@+id/map" />
+
+    <TextView
+        android:id="@+id/destinationAddressTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Destination Address"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toBottomOf="@+id/startAddressTextInput" />
+
+    <TextView
+        android:id="@+id/waypointAddressTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Waypoint Address"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toBottomOf="@+id/destinationAddressTextInput" />
+
+    <EditText
+        android:id="@+id/startAddressTextInput"
+        android:layout_width="250dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="56dp"
+        android:ems="10"
+        android:inputType="textAutoCorrect|textPersonName"
+        android:text="Location"
+        android:textSize="14sp"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toBottomOf="@+id/startAddressTextView" />
+
+    <EditText
+        android:id="@+id/destinationAddressTextInput"
+        android:layout_width="250dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="56dp"
+        android:ems="10"
+        android:inputType="textAutoCorrect|textPersonName"
+        android:text="Location"
+        android:textSize="14sp"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toBottomOf="@+id/destinationAddressTextView" />
+
+    <Button
+        android:id="@+id/setStartButton"
+        android:layout_width="51dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="56dp"
+        android:text="Set"
+        android:textSize="8sp"
+        android:onClick="onSetStart"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintStart_toEndOf="@+id/startAddressTextInput"
+        map:layout_constraintTop_toBottomOf="@+id/startAddressTextView" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="395dp"
+        android:layout_height="124dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toBottomOf="@+id/waypointAddressTextInput" />
+
+    <TextView
+        android:id="@+id/durationTextView"
+        android:layout_width="133dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:text="Duration"
+        android:textSize="18sp"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/distanceTextView"
+        android:layout_width="133dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:text="Distance"
+        android:textSize="18sp"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintTop_toBottomOf="@+id/durationTextView" />
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="118dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:text="Back"
+        android:onClick="onBack"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toBottomOf="@+id/listView" />
+
+</android.support.constraint.ConstraintLayout>
