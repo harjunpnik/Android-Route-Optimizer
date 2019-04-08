@@ -12,4 +12,4 @@ This application uses the Google Maps API to show the user the fastest route. In
 
 ![Blank Route Screen](https://github.com/harjunpnik/Android-Route-Optimizer/blob/master/imgs/blankRoute.png)
 
-![Saved Route Screen](https://github.com/harjunpnik/Android-Route-Optimizer/blob/master/imgs/start.png)
+![Saved Route Screen](https://github.com/harjunpnik/Android-Route-Optimizer/blob/master/imgs/route.png)
